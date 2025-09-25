@@ -291,7 +291,7 @@ def main():
                 }
                 tasks.append(task)
                 video_count += 1
-                logging.info(f"生成視頻 {video_count}: {video_filename} (置信度: {confidence:.3f})")
+                logging.info(f"Generated video {video_count}: {video_filename} (confidence: {confidence:.3f})")
             last_video_frame = frame_no
             progress_bar.update(1)
 

@@ -53,12 +53,11 @@ def resize_bbox(bbox, resize_factor, image_width, image_height):
 
     # Check if width-to-height ratio is less than 1:2
     if width * 2 < height:
-        # Calculate height to crop
+        # Calculate height to crop (keep upper part, crop lower part)
         crop_height = height / 2
-        # Crop upper part
-        y1 += crop_height
-        height = height - crop_height
-        y2 = y1 + height
+        # Keep upper part by adjusting y2 only
+        y2 = y1 + crop_height  # Keep only the upper half
+        height = y2 - y1
         center_y = y1 + height / 2
 
     # Adjust width and height according to resize_factor

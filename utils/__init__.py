@@ -1,11 +1,11 @@
 # YOLOv7 utils module
-# 簡化的 utils 模組
+# Simplified utils module
 
 import torch
 import torch.nn as nn
 
 class ModelEMA:
-    """模型指數移動平均"""
+    """Model Exponential Moving Average"""
     def __init__(self, model, decay=0.9999):
         self.ema = model
         self.decay = decay
@@ -13,5 +13,5 @@ class ModelEMA:
     def update(self, model):
         pass
 
-# 導出類別
+# Export classes
 __all__ = ['ModelEMA']

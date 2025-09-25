@@ -34,7 +34,7 @@ def process_detections(result_boxes, result_scores, result_classid, target_class
     for box, score, cls_id in zip(result_boxes, result_scores, result_classid):
         if score < conf_threshold:
             continue
-        class_id = int(cls_id)
+        class_id = int(cls_id) 
         # Only process target classes
         if class_id not in target_classes:
             continue
