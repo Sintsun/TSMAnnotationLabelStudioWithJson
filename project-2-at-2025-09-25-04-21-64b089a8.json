@@ -1,0 +1,62 @@
+[
+  {
+    "video": "\/data\/upload\/2\/bc735551-NVR_ch13_main_20250207113000_20250207115100_frame005991.mp4",
+    "id": 1,
+    "choice": "normal",
+    "annotator": 1,
+    "annotation_id": 1,
+    "created_at": "2025-09-25T04:19:51.810704Z",
+    "updated_at": "2025-09-25T04:19:51.810779Z",
+    "lead_time": 4.785
+  },
+  {
+    "video": "\/data\/upload\/2\/a0ff7d6d-NVR_ch13_main_20250207113000_20250207115100_frame006053.mp4",
+    "id": 2,
+    "choice": "normal",
+    "annotator": 1,
+    "annotation_id": 2,
+    "created_at": "2025-09-25T04:20:06.210647Z",
+    "updated_at": "2025-09-25T04:20:06.210715Z",
+    "lead_time": 10.733
+  },
+  {
+    "video": "\/data\/upload\/2\/b5d8056a-NVR_ch13_main_20250207113000_20250207115100_frame006141.mp4",
+    "id": 3,
+    "choice": "normal",
+    "annotator": 1,
+    "annotation_id": 3,
+    "created_at": "2025-09-25T04:20:15.042444Z",
+    "updated_at": "2025-09-25T04:20:15.042516Z",
+    "lead_time": 7.721
+  },
+  {
+    "video": "\/data\/upload\/2\/c7023dac-NVR_ch13_main_20250207113000_20250207115100_frame006497.mp4",
+    "id": 4,
+    "choice": "normal",
+    "annotator": 1,
+    "annotation_id": 4,
+    "created_at": "2025-09-25T04:20:25.619250Z",
+    "updated_at": "2025-09-25T04:20:25.619319Z",
+    "lead_time": 6.648
+  },
+  {
+    "video": "\/data\/upload\/2\/cbd3e0be-NVR_ch13_main_20250207113000_20250207115100_frame006611.mp4",
+    "id": 5,
+    "choice": "normal",
+    "annotator": 1,
+    "annotation_id": 5,
+    "created_at": "2025-09-25T04:20:31.031202Z",
+    "updated_at": "2025-09-25T04:20:31.031278Z",
+    "lead_time": 4.091
+  },
+  {
+    "video": "\/data\/upload\/2\/8027f2e3-NVR_ch13_main_20250207113000_20250207115100_frame006724.mp4",
+    "id": 6,
+    "choice": "shaking",
+    "annotator": 1,
+    "annotation_id": 6,
+    "created_at": "2025-09-25T04:20:36.333046Z",
+    "updated_at": "2025-09-25T04:20:36.333119Z",
+    "lead_time": 4.108
+  }
+]

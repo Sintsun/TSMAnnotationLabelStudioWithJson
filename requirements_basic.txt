@@ -1,0 +1,4 @@
+# 基本依賴項
+opencv-python>=4.5.0
+tqdm>=4.60.0
+pathlib2>=2.3.0

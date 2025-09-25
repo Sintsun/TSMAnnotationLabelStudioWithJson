@@ -1,0 +1,19 @@
+# 核心依賴項
+opencv-python>=4.5.0
+numpy>=1.21.0
+tqdm>=4.60.0
+
+# TensorRT 相關依賴項
+tensorrt>=8.0.0
+pycuda>=2021.1
+
+# 系統和工具依賴項
+pathlib2>=2.3.0
+
+# 可選依賴項（用於更好的性能）
+# 如果您有 NVIDIA GPU，可以安裝 CUDA 相關的 OpenCV
+# opencv-python-headless>=4.5.0  # 無頭版本，適合伺服器環境
+
+# 開發和調試工具（可選）
+# matplotlib>=3.3.0  # 用於可視化
+# jupyter>=1.0.0     # 用於筆記本開發
