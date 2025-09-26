@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 624,
+                "y": 276,
+                "width": 264,
+                "height": 352
+            }
+        }
+    ],
+    "video_name": "TR3-1-data_2025_05_02__16_28_24.mkv",
+    "frame": 1872
+}

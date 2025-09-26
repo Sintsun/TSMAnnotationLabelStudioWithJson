@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 730,
+                "y": 199,
+                "width": 196,
+                "height": 379
+            }
+        }
+    ],
+    "video_name": "TR3-1-hit_2025_05_02__15_28_20.mkv",
+    "frame": 2380
+}

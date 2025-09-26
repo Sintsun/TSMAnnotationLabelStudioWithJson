@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 4,
+                "y": 450,
+                "width": 255,
+                "height": 444
+            }
+        }
+    ],
+    "video_name": "D04_20250206111405.mp4",
+    "frame": 21511
+}

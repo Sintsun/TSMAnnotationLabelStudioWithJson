@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 869,
+                "y": 191,
+                "width": 219,
+                "height": 358
+            }
+        }
+    ],
+    "video_name": "room_7B_20241112T170719.mkv",
+    "frame": 5967
+}

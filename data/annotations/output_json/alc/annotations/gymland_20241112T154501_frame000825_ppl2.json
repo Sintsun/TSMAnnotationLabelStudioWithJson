@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 673,
+                "y": 433,
+                "width": 287,
+                "height": 498
+            }
+        }
+    ],
+    "video_name": "gymland_20241112T154501.mkv",
+    "frame": 825
+}

@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 214,
+                "y": 512,
+                "width": 328,
+                "height": 527
+            }
+        }
+    ],
+    "video_name": "14-04-25-04_29_59_cam_1_warning_shaking.mp4",
+    "frame": 60
+}

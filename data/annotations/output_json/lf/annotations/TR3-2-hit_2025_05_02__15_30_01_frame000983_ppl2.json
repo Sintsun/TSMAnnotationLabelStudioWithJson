@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 849,
+                "y": 192,
+                "width": 141,
+                "height": 265
+            }
+        }
+    ],
+    "video_name": "TR3-2-hit_2025_05_02__15_30_01.mkv",
+    "frame": 983
+}

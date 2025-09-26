@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 1463,
+                "y": 473,
+                "width": 263,
+                "height": 361
+            }
+        }
+    ],
+    "video_name": "room_12B_20241112T163001.mkv",
+    "frame": 5553
+}

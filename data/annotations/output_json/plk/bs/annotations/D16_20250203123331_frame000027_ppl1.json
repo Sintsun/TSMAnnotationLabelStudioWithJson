@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 320,
+                "y": 802,
+                "width": 325,
+                "height": 276
+            }
+        }
+    ],
+    "video_name": "D16_20250203123331.mp4",
+    "frame": 27
+}

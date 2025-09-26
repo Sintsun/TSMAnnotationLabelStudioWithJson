@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 1217,
+                "y": 199,
+                "width": 201,
+                "height": 286
+            }
+        }
+    ],
+    "video_name": "gymland_normal_20241112T155018.mkv",
+    "frame": 8121
+}

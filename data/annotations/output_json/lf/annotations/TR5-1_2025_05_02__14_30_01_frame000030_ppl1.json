@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 387,
+                "y": 857,
+                "width": 446,
+                "height": 221
+            }
+        }
+    ],
+    "video_name": "TR5-1_2025_05_02__14_30_01.mkv",
+    "frame": 30
+}

@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 1000,
+                "y": 359,
+                "width": 280,
+                "height": 552
+            }
+        }
+    ],
+    "video_name": "plk3f-1_2025_02_06__10_36_18.mkv",
+    "frame": 1959
+}

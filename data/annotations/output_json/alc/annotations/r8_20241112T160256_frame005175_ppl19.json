@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 1325,
+                "y": 125,
+                "width": 200,
+                "height": 336
+            }
+        }
+    ],
+    "video_name": "r8_20241112T160256.mkv",
+    "frame": 5175
+}

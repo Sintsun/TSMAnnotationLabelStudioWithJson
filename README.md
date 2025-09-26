@@ -31,15 +31,15 @@ pip install -r requirements.txt
 
 ### 2. Test Your TensorRT Engine
 ```bash
-python test_simple_engine.py
+python src/detection/test_simple_engine.py
 ```
 
 ### 3. Process Video and Generate Annotations
 ```bash
-python yolo_detect_to_json.py \
-  --yolov7_engine_file_path engine_plugin/childabuse_28032025_re.engine \
-  --input_video_path NVR_ch13_main_20250207113000_20250207115100.mp4 \
-  --dataset_path nvr_test_output \
+python src/detection/yolo_detect_to_json.py \
+  --yolov7_engine_file_path engines/childabuse_28032025_re.engine \
+  --input_video_path data/input/NVR_ch13_main_20250207113000_20250207115100.mp4 \
+  --dataset_path data/annotations \
   --frame_interval 60 \
   --target_classes "2" \
   --conf_threshold 0.5
@@ -47,10 +47,10 @@ python yolo_detect_to_json.py \
 
 ### 4. Generate Short Video Clips
 ```bash
-python json_to_24frame_video.py \
-  --video_folder_path . \
-  --dataset_path nvr_test_output \
-  --output_video_path test_output_videos \
+python src/video_processing/json_to_24frame_video.py \
+  --video_folder_path data/input \
+  --dataset_path data/annotations \
+  --output_video_path data/videos \
   --temporal_size 24 \
   --frame_interval 60 \
   --upper_crop
@@ -58,10 +58,10 @@ python json_to_24frame_video.py \
 
 ### 5. Create TSM Dataset
 ```bash
-python generate_tsm_dataset.py \
-  --video_folder test_output_videos \
-  --output_folder tsm_dataset_output \
-  --json_folder . \
+python src/dataset_generation/generate_tsm_dataset.py \
+  --video_folder data/videos \
+  --output_folder data/datasets/tsm_dataset_output \
+  --json_folder data/videos \
   --expected_frames 24
 ```
 
@@ -108,10 +108,10 @@ export LD_LIBRARY_PATH=$CUDA_HOME/targets/aarch64-linux/lib:$LD_LIBRARY_PATH
 
 #### 1. YOLOv7 TensorRT Detection
 ```bash
-python yolo_detect_to_json.py \
-  --yolov7_engine_file_path <engine_file> \
-  --input_video_path <video_file> \
-  --dataset_path <output_dir> \
+python src/detection/yolo_detect_to_json.py \
+  --yolov7_engine_file_path engines/<engine_file> \
+  --input_video_path data/input/<video_file> \
+  --dataset_path data/annotations \
   --frame_interval 60 \
   --target_classes "0,1,2" \
   --conf_threshold 0.5 \
@@ -129,10 +129,10 @@ python yolo_detect_to_json.py \
 
 #### 2. Video Clip Generation
 ```bash
-python json_to_24frame_video.py \
-  --video_folder_path <video_dir> \
-  --dataset_path <json_dir> \
-  --output_video_path <output_dir> \
+python src/video_processing/json_to_24frame_video.py \
+  --video_folder_path data/input \
+  --dataset_path data/annotations \
+  --output_video_path data/videos \
   --temporal_size 24 \
   --frame_interval 60 \
   --square \
@@ -151,10 +151,10 @@ python json_to_24frame_video.py \
 
 #### 3. TSM Dataset Generation
 ```bash
-python generate_tsm_dataset.py \
-  --video_folder <video_dir> \
-  --output_folder <output_dir> \
-  --json_folder <json_dir> \
+python src/dataset_generation/generate_tsm_dataset.py \
+  --video_folder data/videos \
+  --output_folder data/datasets/tsm_dataset_output \
+  --json_folder data/videos \
   --expected_frames 24
 ```
 
@@ -162,7 +162,7 @@ python generate_tsm_dataset.py \
 
 #### From PyTorch Model
 ```bash
-python convert_engine.py \
+python src/utils/convert_engine.py \
   --input_model your_model.pt \
   --output_engine your_model.engine \
   --input_size 640
@@ -170,7 +170,7 @@ python convert_engine.py \
 
 #### From ONNX Model
 ```bash
-python convert_engine.py \
+python src/utils/convert_engine.py \
   --onnx_model your_model.onnx \
   --engine_file your_model.engine
 ```
@@ -179,11 +179,11 @@ python convert_engine.py \
 
 ### YoLov7_TRT Class
 ```python
-from yolov7_trt import YoLov7_TRT
+from src.detection.yolov7_trt import YoLov7_TRT
 
 # Initialize model
 model = YoLov7_TRT(
-    engine_file_path="model.engine",
+    engine_file_path="engines/model.engine",
     conf_threshold=0.5,
     iou_threshold=0.4
 )
@@ -197,7 +197,7 @@ model.destroy()
 
 ### Bounding Box Algorithms
 ```python
-from boundbox_algo import (
+from src.video_processing.boundbox_algo import (
     crop_upper_bbox,
     make_square_bbox,
     resize_bbox,
@@ -223,28 +223,28 @@ bbox = expand_crop_bbox(bbox, width, height, expand_factor=1.1)
 
 ```bash
 # 1. Process video with detection
-python yolo_detect_to_json.py \
-  --yolov7_engine_file_path engine_plugin/childabuse_28032025_re.engine \
-  --input_video_path sample_video.mp4 \
-  --dataset_path annotations \
+python src/detection/yolo_detect_to_json.py \
+  --yolov7_engine_file_path engines/childabuse_28032025_re.engine \
+  --input_video_path data/input/sample_video.mp4 \
+  --dataset_path data/annotations \
   --frame_interval 60 \
   --target_classes "2" \
   --conf_threshold 0.5
 
 # 2. Generate video clips
-python json_to_24frame_video.py \
-  --video_folder_path . \
-  --dataset_path annotations \
-  --output_video_path video_clips \
+python src/video_processing/json_to_24frame_video.py \
+  --video_folder_path data/input \
+  --dataset_path data/annotations \
+  --output_video_path data/videos \
   --temporal_size 24 \
   --upper_crop \
   --bbox_resize_factor 1.2
 
 # 3. Create TSM dataset
-python generate_tsm_dataset.py \
-  --video_folder video_clips \
-  --output_folder tsm_dataset \
-  --json_folder . \
+python src/dataset_generation/generate_tsm_dataset.py \
+  --video_folder data/videos \
+  --output_folder data/datasets/tsm_dataset \
+  --json_folder data/videos \
   --expected_frames 24
 ```
 
@@ -319,41 +319,50 @@ ffmpeg -version
 nvidia-smi -l 1
 
 # Reduce batch size in engine creation
-python convert_engine.py --batch_size 1
+python src/utils/convert_engine.py --batch_size 1
 ```
 
 #### Processing Speed
 ```bash
 # Skip frame re-encoding
-python json_to_24frame_video.py --skip_reencode
+python src/video_processing/json_to_24frame_video.py --skip_reencodean a
 
 # Use hardware acceleration
-python json_to_24frame_video.py --use_hw_accel
+python src/video_processing/json_to_24frame_video.py --use_hw_accel
 ```
 
 ## 📁 Project Structure
 
 ```
 TSMAnnotationLabelStudioWithJson/
-├── 📄 Core Scripts
-│   ├── yolo_detect_to_json.py      # Main detection pipeline
-│   ├── json_to_24frame_video.py    # Video clip generation
-│   ├── generate_tsm_dataset.py     # TSM dataset creation
-│   └── yolov7_trt.py              # TensorRT inference
-├── 🔧 Utilities
-│   ├── boundbox_algo.py           # Bounding box algorithms
-│   ├── convert_engine.py          # Engine conversion
-│   └── test_simple_engine.py      # Engine testing
-├── 📁 Models
-│   ├── models/                    # YOLOv7 model files
+├── 📁 src/                        # Main source code
+│   ├── detection/                 # Object detection related
+│   │   ├── yolo_detect_to_json.py # Main detection pipeline
+│   │   ├── yolov7_trt.py         # TensorRT inference
+│   │   └── test_simple_engine.py # Engine testing
+│   ├── video_processing/          # Video processing related
+│   │   ├── json_to_24frame_video.py # Video clip generation
+│   │   └── boundbox_algo.py      # Bounding box algorithms
+│   ├── dataset_generation/        # Dataset generation related
+│   │   ├── generate_tsm_dataset.py # TSM dataset creation
+│   │   └── create_multiple_tsm_datasets.py
 │   └── utils/                     # Utility functions
-├── 🎯 Examples
-│   ├── engine_plugin/             # TensorRT engines
-│   └── datasets_tsm/              # Sample datasets
-└── 📋 Configuration
-    ├── requirements.txt           # Dependencies
-    ├── INSTALLATION_GUIDE.md     # Setup guide
-    └── project-2-at-*.json       # Label Studio config
+│       └── convert_engine.py     # Engine conversion
+├── 📁 models/                     # Model related files
+│   ├── yolo/                      # YOLO model files
+│   └── utils/                     # Model utility functions
+├── 📁 engines/                    # TensorRT engine files
+├── 📁 data/                       # Data related
+│   ├── input/                     # Input videos
+│   ├── annotations/               # Annotation files
+│   ├── videos/                    # Processed videos
+│   └── datasets/                  # Generated datasets
+├── 📁 tools/                      # Auxiliary tools
+├── 📁 config/                     # Configuration files
+├── 📁 scripts/                    # Installation and deployment scripts
+├── 📄 requirements.txt            # Dependencies
+├── 📄 README.md
+└── 📄 INSTALLATION_GUIDE.md
 ```
 
 ## 🎯 Use Cases

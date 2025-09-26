@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 0,
+                "y": 340,
+                "width": 314,
+                "height": 448
+            }
+        }
+    ],
+    "video_name": "TR5-2_2025_05_02__13_56_52.mkv",
+    "frame": 1276
+}

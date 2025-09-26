@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 567,
+                "y": 392,
+                "width": 379,
+                "height": 470
+            }
+        }
+    ],
+    "video_name": "test_2025_02_27__17_49_30.mkv",
+    "frame": 34
+}

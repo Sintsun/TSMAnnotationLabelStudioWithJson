@@ -1,0 +1,170 @@
+[
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame005991.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 21.354166666666664,
+                            "y": 0.6481481481481481,
+                            "width": 13.489583333333332,
+                            "height": 23.98148148148148,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame006053.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 37.916666666666664,
+                            "y": 2.685185185185185,
+                            "width": 13.4375,
+                            "height": 23.88888888888889,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame006141.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 21.614583333333336,
+                            "y": 0.0,
+                            "width": 7.135416666666666,
+                            "height": 12.407407407407407,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame006497.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 51.66666666666667,
+                            "y": 9.814814814814815,
+                            "width": 15.104166666666666,
+                            "height": 26.944444444444443,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame006611.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 53.645833333333336,
+                            "y": 9.25925925925926,
+                            "width": 17.65625,
+                            "height": 31.38888888888889,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "data": {
+            "video": "/media/nvidia/128 GB/TSMAnnotationLabelStudioWithJson/output_videos/NVR_ch13_main_20250207113000_20250207115100_frame006724.mp4"
+        },
+        "predictions": [
+            {
+                "model_version": "yolo_auto",
+                "result": [
+                    {
+                        "from_name": "label",
+                        "to_name": "video",
+                        "type": "rectanglelabels",
+                        "value": {
+                            "frame": 1,
+                            "x": 40.15625,
+                            "y": 2.1296296296296298,
+                            "width": 14.322916666666666,
+                            "height": 25.37037037037037,
+                            "rotation": 0,
+                            "rectanglelabels": [
+                                "Suspicious"
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+]

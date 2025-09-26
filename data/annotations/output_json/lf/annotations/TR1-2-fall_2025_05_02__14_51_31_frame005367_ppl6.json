@@ -1,0 +1,14 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 75,
+                "y": 526,
+                "width": 347,
+                "height": 551
+            }
+        }
+    ],
+    "video_name": "TR1-2-fall_2025_05_02__14_51_31.mkv",
+    "frame": 5367
+}

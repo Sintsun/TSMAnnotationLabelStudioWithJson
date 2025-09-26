@@ -1,0 +1,16 @@
+{
+    "detection": [
+        {
+            "value": {
+                "x": 405,
+                "y": 83,
+                "width": 146,
+                "height": 235
+            }
+        }
+    ],
+    "video_name": "NVR_ch13_main_20250207113000_20250207115100.mp4",
+    "frame": 12714,
+    "class_id": 2,
+    "confidence": 0.6471133232116699
+}
